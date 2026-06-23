@@ -6,15 +6,15 @@ It operates completely in the background with zero UI clutter. Because it uses n
 
 ## Showcases
 
-### Danmaku Textbox
+Danmaku Textbox
 
 <img width="800" height="44" alt="2026-06-2304-36-36-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/96ad1689-77b1-48bf-a35a-af6bab1060dd" />
 
-### Comments
+Comments
 
 <img width="800" height="96" alt="2026-06-2304-37-02-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/a744841f-7571-4bbf-b1fd-62b240f3b6c2" />
 
-### Searching
+Searching
 
 <img width="502" height="44" alt="2026-06-2304-37-58-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/ed818efd-4048-43bc-ae6c-558ac31b00fe" />
 
