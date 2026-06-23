@@ -4,6 +4,18 @@ Bilibili-EnToCn is a browser extension that translates your English text drafts 
 
 It operates completely in the background with zero UI clutter. Because it uses native browser input events, Bilibili's React/Vue frontend properly registers the translated text, clears the field placeholders, and keeps the post or search buttons active.
 
+## Showcases
+
+Danmaku Textbox
+
+<img width="800" height="44" alt="2026-06-2304-36-36-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/96ad1689-77b1-48bf-a35a-af6bab1060dd" />
+
+## Comments
+
+<img width="800" height="96" alt="2026-06-2304-37-02-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/a744841f-7571-4bbf-b1fd-62b240f3b6c2" />
+
+
+
 ## Why Use It?
 
 * **Better Search Results:** Bilibili is a Chinese platform, and its search engine is heavily optimized for Chinese characters. Searching in English often yields zero or poor results. Translating your search queries to Chinese instantly opens up the full catalog of videos, creators, and niche topics.
