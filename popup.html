@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EnToCn Settings</title>
+  <style>
+    :root {
+      --bili-blue: #00aeec;
+      --bili-blue-hover: #00a1d6;
+      --bili-pink: #ff6699;
+      --text-dark: #18191c;
+      --text-muted: #61666d;
+      --bg-light: #f1f2f3;
+      --border-color: #e3e6e8;
+    }
+
+    body {
+      width: 320px;
+      margin: 0;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--text-dark);
+      background-color: #ffffff;
+      box-sizing: border-box;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 12px;
+    }
+
+    .logo {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--bili-blue);
+      letter-spacing: 0.5px;
+    }
+
+    .tagline {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-left: auto;
+      background: var(--bg-light);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+    }
+
+    select, input {
+      width: 100%;
+      padding: 8px;
+      font-size: 13px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      box-sizing: border-box;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    select:focus, input:focus {
+      border-color: var(--bili-blue);
+    }
+
+    .sub-section {
+      background-color: var(--bg-light);
+      padding: 10px;
+      border-radius: 6px;
+      margin-top: 8px;
+      display: none;
+    }
+
+    .sub-section.active {
+      display: block;
+    }
+
+    .button-container {
+      margin-top: 18px;
+      display: flex;
+      align-items: center;
+    }
+
+    button {
+      background-color: var(--bili-blue);
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: var(--bili-blue-hover);
+    }
+
+    .status-msg {
+      font-size: 12px;
+      color: #22c55e;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 10px;
+      display: none;
+    }
+
+    .shortcut-info {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border-color);
+      font-size: 11px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .shortcut-info strong {
+      color: var(--bili-pink);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="logo">EnToCn 🌐</div>
+    <div class="tagline">Draft Translator</div>
+  </div>
+
+  <div class="form-group">
+    <label for="engine">Translation Engine</label>
+    <select id="engine">
+      <option value="google">Google Translate (Free, Default)</option>
+      <option value="deepl">DeepL API</option>
+      <option value="microsoft">Microsoft Translator</option>
+    </select>
+  </div>
+
+  <div id="deepl-config" class="sub-section">
+    <div class="form-group">
+      <label for="deeplKey">DeepL API Auth Key</label>
+      <input type="password" id="deeplKey" placeholder="Enter DeepL Key...">
+    </div>
+    <div class="form-group" style="margin-bottom: 0;">
+      <label for="deeplType">API Plan Type</label>
+      <select id="deeplType">
+        <option value="free">DeepL API Free</option>
+        <option value="pro">DeepL API Pro</option>
+      </select>
+    </div>
+  </div>
+
+  <div id="microsoft-config" class="sub-section">
+    <div class="form-group">
+      <label for="msKey">Azure Translator Key</label>
+      <input type="password" id="msKey" placeholder="Enter Azure Key...">
+    </div>
+    <div class="form-group" style="margin-bottom: 0;">
+      <label for="msRegion">Azure Service Region</label>
+      <input type="text" id="msRegion" placeholder="global, eastus, westeurope, etc.">
+    </div>
+  </div>
+
+  <div class="button-container">
+    <button id="save-btn">Save Settings</button>
+  </div>
+
+  <div id="status-msg" class="status-msg">✓ Settings saved successfully!</div>
+
+  <div class="shortcut-info">
+    💡 <strong>Alt + T</strong> (or <strong>Option + T</strong> on Mac) translates your active English draft.<br>
+    ✍️ Start a comment with <strong>/zh </strong> and press <strong>Enter/Tab</strong> to auto-translate.
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+/* STREAMING_CHUNK: Declaring modern CSS design tokens and core styling parameters */
+:root {
+--bili-blue: #00aeec;
+--bili-blue-hover: #00a1d6;
+--text-grey: #61666d;
+--bg-dark: #18191c;
+--border-color: #e3e6e8;
+}
+
+/* STREAMING_CHUNK: Custom sizing and colors for the En to Cn action element /
+/ --- Comment Draft Option Translating Action Controls --- */
+.entocn-input-translate-btn {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+background-color: #f1f2f3;
+color: #61666d;
+border: 1px solid var(--border-color);
+padding: 6px 12px;
+font-size: 12px;
+font-weight: 600;
+border-radius: 6px;
+cursor: pointer;
+margin-right: 8px;
+transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+height: 32px;
+vertical-align: middle;
+box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+.entocn-input-translate-btn:hover {
+background-color: var(--bili-blue);
+color: white;
+border-color: var(--bili-blue);
+transform: translateY(-1px);
+box-shadow: 0 3px 6px rgba(0, 174, 236, 0.15);
+}
+
+.entocn-input-translate-btn:active {
+transform: translateY(0);
+}
+
+/* Highlight transitions during active fetch events */
+.entocn-input-translate-btn.notifying {
+background-color: #23ade5;
+color: white;
+border-color: #23ade5;
+}
+
+.entocn-input-translate-btn:disabled {
+opacity: 0.6;
+cursor: not-allowed;
+transform: none !important;
+box-shadow: none !important;
+}

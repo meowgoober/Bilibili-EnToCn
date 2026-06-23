@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "EnToCn - Bilibili English to Chinese Translator",
+  "version": "1.2.5",
+  "description": "Translates English comment and danmaku drafts to Chinese inline using Alt+T or /zh commands on Bilibili.",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://*.bilibili.com/*",
+    "http://*.bilibili.com/*",
+    "https://translate.googleapis.com/*",
+    "https://api-free.deepl.com/*",
+    "https://api.deepl.com/*",
+    "https://api.cognitive.microsofttranslator.com/*"
+  ],
+  "icons": {
+    "128": "icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.bilibili.com/*",
+        "http://*.bilibili.com/*",
+        "https://bilibili.com/*",
+        "http://bilibili.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "EnToCn Settings"
+  }
+}
